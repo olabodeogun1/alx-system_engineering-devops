@@ -1,2 +1,7 @@
 #!/usr/bin/env ruby
-puts ARGV[0].scan(/hbt{2,5}n/).join
+
+string = ARGV[0]
+match = string.match(/School/)
+
+puts match ? match[0] : ""
+
