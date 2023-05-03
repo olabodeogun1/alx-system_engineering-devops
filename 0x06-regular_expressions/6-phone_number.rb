@@ -1,2 +1,7 @@
 #!/usr/bin/env ruby
-puts ARGV[0].scan(/^\d{10,10}$/).join
+
+string = ARGV[0]
+match = string.match(/^\d{10}$/)
+
+puts match ? match[0] : ""
+
