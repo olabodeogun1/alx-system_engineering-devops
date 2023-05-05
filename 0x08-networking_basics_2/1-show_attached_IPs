@@ -1,7 +1,4 @@
 #!/usr/bin/env bash
-# change local host and add facebook host
+# Write a Bash script that displays all active IPv4 IPs on the machine it’s executed on.
 
-cp /etc/hosts ~/hosts.new
-sed -i 's/^127.0.0.1/127.0.0.2/g' ~/hosts.new
-echo '8.8.8.8		facebook.com' >> ~/hosts.new
-cp -f ~/hosts.new /etc/hosts
+ifconfig | grep 'inet' | awk '{print $2}'
